@@ -166,3 +166,176 @@ COAI는 **AI 기반 코드 분석**, **알고리즘 문제 생성 및 풀이**, 
 * 대용량 트래픽 대응 (Auto Scaling)
 * 실시간 알림 기능
 * 쿼리 최적화 및 성능 테스트(nGrinder)
+
+---
+
+# COAI
+
+> An AI Pair Programming Partner for Developer Growth
+
+**COAI** is a developer learning platform that integrates **AI-powered code analysis**, **algorithm problem generation and solving**, **real-time coding battles**, **community features**, and a **payment & point system**.  
+Rather than focusing solely on correct answers, COAI emphasizes **code quality and continuous growth**.
+
+---
+
+## Key Features
+
+* **AI Code Quality Analysis**  
+  Comprehensive analysis covering readability, design principles (SRP, DRY, KISS), security, and performance
+
+* **AI Algorithm Problem Generation**  
+  Real-time problem generation based on difficulty × algorithm type × story theme
+
+* **Algorithm Problem Solving**  
+  Normal mode / Focus mode, real-time judging, and AI-driven feedback
+
+* **1vs1 Real-Time Coding Battles**  
+  Low-latency competitive system powered by Redis + WebSocket
+
+* **Focus Mode**  
+  Gaze-tracking-based concentration monitoring with penalty enforcement
+
+* **Community**  
+  Separate free board and code board, with an extensible tag system
+
+* **Payment & Point System**  
+  Payment, refund, and subscription management powered by Toss Payments
+
+* **GitHub Integration**  
+  Import code and automatically commit AI feedback to repositories
+
+---
+
+## Core Domains
+
+* User & authorization management  
+* Algorithm problem domain  
+* AI code analysis domain  
+* Points & payment domain  
+* Community domain  
+
+> Composed of **5 core domains** and **33 database tables**
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React  
+* Vite  
+* Tailwind CSS  
+* Monaco Editor  
+* WebSocket  
+
+### Backend
+
+* Spring Boot  
+* Spring Security  
+* MyBatis  
+* Redis  
+* MySQL / PostgreSQL  
+* Spring WebFlux (asynchronous processing)  
+
+### AI / Data
+
+* OpenAI API  
+* RAG (Retrieval-Augmented Generation)  
+* Qdrant (Vector Database)  
+* Langfuse (LLM Observability)  
+
+### DevOps / Infrastructure
+
+* Docker / Docker Hub  
+* Jenkins (CI/CD)  
+* AWS EC2, RDS, S3  
+* Nginx  
+
+---
+
+## AI Code Analysis Criteria
+
+* Readability and cognitive load  
+* KISS / SRP / DRY principles  
+* Magic numbers and naming conventions  
+* Exception handling and security vulnerabilities  
+* Performance and resource efficiency  
+* Testability and documentation  
+
+> Powered by **LLM-as-a-Judge + Few-shot Prompting + RAG**  
+> to deliver accurate, consistent, and personalized feedback
+
+---
+
+## Algorithm Problem Generation Pipeline
+
+1. Problem structure validation  
+2. Similarity check against existing problems  
+3. Optimized code execution verification  
+4. Efficiency comparison validation  
+
+* Real-time requests return problems **within 2 seconds**
+* Pre-generation and validation via background schedulers
+
+---
+
+## 1vs1 Coding Battles
+
+* Redis-based authoritative state management for real-time synchronization  
+* WebSocket-based game state broadcasting  
+* Grace period handling for disconnections  
+* Match results and history persistently stored in the database  
+
+---
+
+## Payment System
+
+* Integrated with Toss Payments  
+* Dual verification: internal server validation + external Toss verification  
+* Idempotent state transitions  
+
+  * READY → PROCESSING → DONE  
+
+* Supports refunds and subscription cancellation  
+
+---
+
+## Security Design
+
+* JWT + Redis-based authentication  
+* GitHub OAuth social login  
+* SQL Injection prevention (PreparedStatement)  
+* XSS protection (whitelist + React automatic escaping)  
+
+---
+
+## CI / CD Pipeline
+
+1. GitHub push  
+2. Jenkins automated build  
+3. Docker image creation  
+4. EC2 container deployment  
+
+* Independent containers per service  
+* Immediate root-cause identification through logs on deployment failure  
+
+---
+
+## Team
+
+* **Gayeon Kim** – Algorithm problem generation, judging, level system  
+* **Seongil Bang** – AI code analysis pipeline  
+* **Sohee Kim** – Community platform design and implementation  
+* **Jisu Bae** – Payments, points, 1vs1 battle system  
+* **Hyunmok Jung** – Admin panel, backend deployment  
+* **Minseok Choi** – Login, OAuth, user registration, frontend deployment  
+
+---
+
+## Future Improvements
+
+* Advanced personalized analysis using GraphRAG  
+* Automatic tag recommendation  
+* Large-scale traffic handling (Auto Scaling)  
+* Real-time notification system  
+* Query optimization and performance testing (nGrinder)  
